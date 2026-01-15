@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "typeRoots": ["./typings","./node_modules/@types"],
     "strict": true,
     "target": "esnext",
     "module": "esnext",
@@ -7,12 +8,21 @@
       "esnext",
       "dom"
     ],
+    
+    /* 实验性特性 (Hippy 可能会用到) */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
     "declaration": true,
     "rootDir": ".",
     "baseUrl": "./",
     "outDir": "dist",
     "jsx": "preserve",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": null,
+    "forceConsistentCasingInFileNames": true,
     "allowJs": false,
     "esModuleInterop": true,
     "noImplicitAny": false
